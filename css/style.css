@@ -13,7 +13,6 @@ header {
   background: no-repeat center url('../img/heading.jpg');
   background-size: cover;
   padding-bottom: 0;
-  float: left;
   width: 100%;
   background-color: steelblue;
   margin: 0;
@@ -23,7 +22,8 @@ header {
 /***Main Logo***/
 
 .logo h1 {
-  height: 170px;
+  text-align: center;
+  height: 150px;
   text-shadow: 0px 1px 5px #809095;
   display: block;
   margin: 0 20px 30px;
@@ -33,32 +33,59 @@ header {
 }
 
 /***Navigation Bar***/
+.nav {
+  background-image: linear-gradient(transparent, rgba(140, 140, 150, 0.78) 75%);
+}
 .nav a {
-  padding: 10px;
+  display: block;
   text-decoration: none;
   color: white;
+  padding: 15px 20px;
 }
 
 .nav a:hover {
-  background-color: rgba(180, 180, 200, 0.70);
-  border-bottom: 5px solid white;
+  transition-property: background-color;
+  transition-duration: 1s;
+  box-shadow: 0 0 8px rgba(200, 203, 238, 1);
+  background-color: rgba(200, 200, 210, .7);
 }
 
 .nav ul {
-  background-image: linear-gradient(transparent, rgba(140, 140, 150, 0.78) 75%);
-  padding: 5px 20px 5px 0;
-  width: 100%;
-  float: right;
-  text-align: right;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 1em;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .nav li {
+  display: block;
+  list-style: none;
   text-shadow: 0 1px 5px #333;
   color: white;
   text-decoration: none;
-  display: inline-block;
-  margin: 10px 15px 15px;
-  padding: 5px 5px 5px 5px;
   font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+}
+/***************************Media Queries***********************/
+@media (min-width: 500px) {
+  header {
+    float: left;
+  }
+
+  .logo h1 {
+    text-align: initial;
+  }
+
+  .nav ul {
+    width: 100%;
+    float: right;
+    text-align: right;
+    background-image: linear-gradient(transparent, rgba(140, 140, 150, 0.78) 75%);
+  }
+  
+  .nav li {
+    display: inline-block;
+  }
+
 }
