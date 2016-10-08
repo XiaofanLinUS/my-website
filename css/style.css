@@ -150,6 +150,9 @@ header {
   font-size: 5em;
 }
 
+.logo a {
+  display: inline;
+}
 /***Navigation Bar***/
 navigation {
   display: block;
@@ -249,7 +252,9 @@ navigation {
   text-align: center;
 }
 
-
+#main-footer a {
+  display: inline;
+}
 
 /***************************Media Queries***********************/
 @media (min-width: 500px) {
