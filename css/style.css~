@@ -1,46 +1,197 @@
 /***************************Preset***********************/
 * {
-  box-size: border-box;
+  box-sizing: border-box;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+
 body {
+  background-color: #808B96;
   font-family: 'Droid Sans', sans-serif;
 }
+
+
+input {
+  margin: .5em auto;
+  display: block;
+  width: 80%;
+  background-color: white;
+  border: 1px solid #808B96;
+}
+
+input:focus {
+  border: 1px solid #aab;
+}
+
+form {
+  text-align: center;
+  height: 18em;
+  border-radius: 0px;
+  padding: 2em 5em;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #5D6D7E;
+}
+
+label {
+  text-shadow: 0 1px 5px black;
+  display: block;
+  font-size: 1.5em;
+  color: white;
+}
+
+button {
+  color: white;
+  font-weight: 900;
+  border: 0;
+  background-color: #337744;
+  margin-top: 2em;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 80px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+  
+  @media(min-width: 400px) {
+    display: inline-block;
+    margin-right: 2.5em;
+    
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+  
+  @media(min-width: 600px) {
+    
+    &:nth-of-type(even) {
+      margin-right: 2.5em;
+    }
+    
+    &:nth-of-type(5) {
+      margin-right: 0;
+    }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+
+.btn-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+
+.btn-5:active {
+  background-color: #449966;
+}
+
+
+/********Wrapperr********/
+
+.wrapper {
+  min-height: calc(100vh - 80px);
+
+}
+
+
+
 
 /********Header********/
 
 header {
-  background: no-repeat center url('../img/heading.jpg');
+  color: white;
+  background: no-repeat center;
+  background-image:  radial-gradient(transparent, rgba(160, 190, 220, .8)),
+                     url('../img/heading.jpg');
   background-size: cover;
   padding-bottom: 0;
   width: 100%;
-  background-color: steelblue;
+  background-color: #cde;
   margin: 0;
-  color: #fff;
+
 }
 
 /***Main Logo***/
 
-.logo h1 {
+.logo h1{ 
+  font-family: 'Orbitron', sans-serif;
   text-align: center;
-  height: 150px;
-  text-shadow: 0px 1px 5px #809095;
+  height: 200px;
+  text-shadow: 0px 1px 5px #000;
   display: block;
   margin: 0 20px 30px;
   padding-top: 100px;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 5em;
 }
 
 /***Navigation Bar***/
+navigation {
+  display: block;
+  
+}
+
+.main-nav {
+  font-size: 1.2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+  box-shadow: 0 1px 5px #000;
+  height: 22px;
+  padding: .1px;
+  margin: 0;
+  background-color: #5D6D7E;
+}
+
+
+.main-nav ul {
+  margin: 0 1em;
+  display: block;
+  text-align: right;
+}
+
+.main-nav li {
+  color: white;
+  display: inline-block;
+  list-style: none;
+}
+
+.main-nav a:hover {
+  color: rgb(200,200,210);
+}
+
 .nav {
-  background-image: linear-gradient(transparent, rgba(140, 140, 150, 0.78) 75%);
+
+  position: relative;
+  font-size: 0.8em;
 }
 .nav a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 15px 20px;
+  padding: 12px 18px;
 }
 
 .nav a:hover {
@@ -50,7 +201,10 @@ header {
   background-color: rgba(200, 200, 210, .7);
 }
 
+
 .nav ul {
+  border-bottom: 1px solid #5D6D7E;
+  background-color: #5D6D7E;
   padding: 0;
   margin: 1em;
   text-align: center;
@@ -67,25 +221,56 @@ header {
   font-weight: 500;
   text-align: center;
 }
+
+.clearfix:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+/***************************Main Content*********************/
+.main-content {
+  color: #eee;
+  font-size: 1.2em;
+}
+
+/***************************Footer*************************/
+#main-footer {
+  color: white;
+  background-color: #5D6D7E;
+  height: 60px;
+  text-align: center;
+}
+
+
+
 /***************************Media Queries***********************/
-@media (min-width: 480px) {
-  header {
-    float: left;
-  }
+@media (min-width: 500px) {
 
   .logo h1 {
-    text-align: initial;
+    text-align: left;
   }
 
   .nav ul {
     width: 100%;
     float: right;
     text-align: right;
-    background-image: linear-gradient(transparent, rgba(140, 140, 150, 0.78) 75%);
   }
   
   .nav li {
     display: inline-block;
   }
 
+  form {
+    text-align: left;
+  }
+
+  input {
+    margin: .5em 0;
+    width: 30%;
+  }
+
+  button {
+    display: block;
+  }
 }

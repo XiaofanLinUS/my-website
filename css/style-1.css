@@ -1,0 +1,32 @@
+/***************************Preset***********************/
+* {
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+
+body {
+  background-color: #808B96;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+
+/***Main Logo***/
+
+.logo {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  height: 100px;
+  text-shadow: 0px 1px 5px #000;
+  display: block;
+  margin: 1px;
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 5em;
+}
