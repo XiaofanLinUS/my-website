@@ -112,7 +112,7 @@ button {
 /********Wrapperr********/
 
 .wrapper {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 60px);
 
 }
 
@@ -226,6 +226,10 @@ navigation {
   content:"";
   display: table;
   clear: both;
+}
+/***************************Primary Content*********************/
+#primary-content form {
+  min-height: calc(100vh - 286px);
 }
 
 /***************************Main Content*********************/

@@ -11,6 +11,7 @@ a {
 
 
 body {
+  padding: 0px;
   background-color: #808B96;
   font-family: 'Droid Sans', sans-serif;
 }
@@ -112,8 +113,9 @@ button {
 /********Wrapperr********/
 
 .wrapper {
+  text-align: left;
   min-height: calc(100vh - 60px);
-
+  padding: 1px; /**Fix Collapse**/
 }
 
 
@@ -227,9 +229,14 @@ navigation {
   display: table;
   clear: both;
 }
+/***************************Primary Content*********************/
+#primary-content form {
+  min-height: calc(100vh - 286px);
+}
 
 /***************************Main Content*********************/
 .main-content {
+  padding-left: 2em;
   color: #eee;
   font-size: 1.2em;
 }
