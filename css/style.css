@@ -244,6 +244,47 @@ navigation {
   font-size: 1.2em;
 }
 
+/***************************Sign Up************************/
+#sign-up-form {
+  box-shadow: 2px 2px 8px black;
+  border-radius: 2px;
+  background-color: grey;
+  padding-bottom: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+  width: 70%;
+  position: relative;
+}
+
+#sign-up-form .exit-close {
+  position: absolute;
+  cursor: pointer;
+  top: -15px;
+  right: -15px;
+}
+
+#overlay .container{
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#sign-up-form input{
+  min-width: 250px;
+  display: inline-block;
+}
+
+#sign-up-form .button {
+  width: 25%;
+  margin-right: auto;
+  margin-left: auto
+}
+#sign-up-form button {
+
+  background-color: teal;
+}
+
 /***************************Footer*************************/
 #main-footer {
   color: white;
@@ -254,6 +295,20 @@ navigation {
 
 #main-footer a {
   display: inline;
+}
+
+/****Overlay*****/
+
+#overlay {
+  text-align: center;
+  vertical-align: center;
+  background: rgba(0,0,0,.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 
 /***************************Media Queries***********************/

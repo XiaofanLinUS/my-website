@@ -22,7 +22,7 @@
       
       <div class="nav">
         <ul>
-	  <li><a href="">Sign Up?</a></li>
+	  <li><a id="sign-up" href="">Sign Up</a></li>
 	</ul>
       </div>
     </header>
@@ -36,6 +36,22 @@
 	<label for="password">Password</label>
 	<input type="password" id="password" name="usr_password">
 	<button class="btn-5" type="submit">Log In</button>
+      </form>
+    </div>
+    <div id="overlay">
+      <form id="sign-up-form" action="" method="post">
+	<img class="exit-close" height="30px" src="img/cross-flat.png" />
+	<div class="container">
+	<label for="email">Email</label>
+	<input type="email" id="email" name="usr_email">
+	<label for="name">User Name</label>
+	<input type="text" id="name" name="usr_name">
+	<label for="password">Password</label>
+	<input type="password" id="password"  name="usr_password">
+	<div class="button">
+	  <button class="btn-5" type="submit">Sign Up</button>
+	</div>
+	</div>
       </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
