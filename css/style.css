@@ -122,18 +122,25 @@ button {
 
 
 /********Header********/
-
 header {
   color: white;
   background: no-repeat center;
-  background-image:  radial-gradient(transparent, rgba(160, 190, 220, .8)),
-                     url('../img/heading.jpg');
+  background-image:  /**radial-gradient(transparent, rgba(160, 190, 220, .8)),**/
+  url('../img/heading.jpg'),
+  url('../img/e.jpg');
   background-size: cover;
   padding-bottom: 0;
   width: 100%;
   background-color: #cde;
   margin: 0;
+  transition: background-image 2s linear;
+  -moz-transition: background-image 2s linear; /* Firefox 4 */
+  -webkit-transition: background-image 2s linear; /* Safari and Chrome */
+  -o-transition: background-image 2s linear; /* Opera */
+}
 
+#fullPage {
+  background-color: rgb(255, 255, 255);
 }
 
 /***Main Logo***/
