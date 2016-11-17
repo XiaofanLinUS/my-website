@@ -1,0 +1,58 @@
+package com.cs151.asciiviolet;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+import com.horstmann.violet.ClassDiagramGraph;
+import com.horstmann.violet.framework.GraphPanel;
+
+/**
+ * A TextBar that receives string
+ * @version 11/10/2016
+ *
+ */
+public class TextBar extends JPanel
+{
+   private String userInput;
+   private JTextArea textfield;
+   private JButton button;
+   private ClassDiagramGraph graph;
+   private GraphPanel panel;
+   private ClassDiagramReader reader;
+   /**
+    * Construct a TextBar
+    */
+   public TextBar(ClassDiagramGraph aGraph, GraphPanel aPanel)
+   {
+	  reader = new ClassDiagramReader(aGraph);
+	  panel = aPanel;
+      setLayout(new BorderLayout());
+      graph = aGraph;
+      userInput = "";
+      textfield = new JTextArea();
+      textfield.setPreferredSize(new Dimension(200, 100));
+      button = new JButton("draw");
+
+      button.addActionListener((e) -> {
+         executeCommand();
+      });
+
+      add(textfield, BorderLayout.SOUTH);
+      add(button, BorderLayout.NORTH);
+   }
+
+private void executeCommand()
+   {
+      userInput = textfield.getText();
+      reader.read(userInput);
+      panel.setModified(true);
+      panel.repaint();
+
+   }
+   
+   public String getUserInput(){ return userInput;}
+}
